@@ -1,0 +1,63 @@
+
+
+<main>
+
+    
+        <div class="heading container-fluid">
+            <h1>Choose Date</h1>
+            <br>
+            <p class="heading-subtitle">Select a specific date between Jun 16, 1995 and <%= today %>.</p>
+        </div>
+    
+    
+        <form action="/apod/pick" method="post">
+            <label for="date">Choose date:</label>
+            <br class="hidden-br">
+            <input class="form-control date-picker-styles" data-toggle="datepicker" placeholder="mm/dd/yyyy" data-method="getDate" name="date" autocomplete="off" maxlength="10" readonly> 
+            <br>
+            <button class="btn btn-success date-form-btn" type="submit">Submit</button>
+        </form>
+    
+    <div class="heading container-fluid">
+        <h1><strong><%= title %> </strong></h1>
+        <h3 class="date-subtitle"><%= date %> </h3>
+    </div>
+
+    <div class="content">
+        <div class="media" style="display: block;">
+            <% if (mediaType === "image") { %>
+                <a href="<%= url %> " target="_blank"><img class="apod-image shadow-lg" src="<%= url %>"
+                    alt="space image"></a>
+            <% } %>
+
+            <% if (mediaType === "video") { %>
+                <iframe class="video"
+                src="<%= url %> ">
+                </iframe>
+            <% } %>
+        </div>
+        <p class="rounded p-4 shadow explanation"><%= explanation %> </p>
+    </div>
+
+    <div class="previousNextButtonForms">
+
+        <form action="" method="" class="previousButtonForm">
+            <% if (yesterday !== false) { %>
+                <a href="/apod?date=<%= yesterday %>" title="Previous day: <%= yesterday %>"><button type="button"
+                    class="btn btn-light btn-lg previousButton"><em class="fas fa-arrow-left"></em></button></a>
+            <% } %>
+        </form>
+
+
+        <form action="" method="" class="nextButtonForm">
+            <% if (tomorrow !== false) { %>
+                <a href="/apod?date=<%= tomorrow %>" title="Next day: <%= tomorrow %>"><button type="button"
+                    class="btn btn-light btn-lg nextButton"><em class="fas fa-arrow-right"></em></button></a>
+            <% } %>
+        </form>
+
+
+
+
+    </div>
+</main>

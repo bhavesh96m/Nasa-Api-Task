@@ -1,0 +1,98 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+/* APOD PAGE STYLING */
+
+.heading {
+    margin: 1.5rem 1rem;
+}
+
+.heading-subtitle {
+    font-size: 1.5rem;
+}
+
+.date-subtitle {
+    font-weight: 400;
+}
+
+.content {
+    margin-bottom: 4rem;
+}
+
+.content img, .video {
+    margin: 1.5rem auto;
+    transition: all .25s ease-in-out;
+}
+
+.video {
+    height: 400px;
+    width: 90%;
+}
+
+.content img {
+    display: inline-block;
+    border-radius: 15px;
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.content p {
+    display: inline-block;
+    margin: 1.5rem 0.3rem 0;
+    line-height: 3; 
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+}
+
+.previousNextButtonForms {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previousButtonForm, .nextButtonForm {
+    display: inline-block;
+    margin: 1.5rem 0.3rem 3rem;
+}
+
+.container-fluid {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+
+
+
+
+/* DATE PICK PAGE STYLING */
+
+.date-form-btn {
+    display: block;
+    margin: 0 auto 10rem; 
+}
+
+.date-picker-styles {
+    width: 164px; 
+    text-align: center; 
+    display: inline-block; 
+    margin: 1rem 1rem 3rem;
+}
+
+
+
+
+
